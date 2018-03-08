@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { headers, rows } from './data.js';
+ 
 class App extends Component {
+  renderRow(row) {
+    return headers.map((header) => (<td>{row[header]}</td>))
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <table>
+        <thead>
+          <tr>
+        {
+          headers.map((header) => (<th>{header}</th>))
+        }
+        </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map((row) => (<tr>{this.renderRow(row)}</tr>))
+          }
+          </tbody>
+      </table>
     );
   }
 }

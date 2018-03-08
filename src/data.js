@@ -11,5 +11,5 @@ for (let i = 0, length = 2000; i < length; i += 1) {
   for (let j = 0, length2 = headers.length; j < length2; j += 1) {
     item[headers[j]] = `Item ${i * headers.length + j}`
   }
-  result.push(item)
+  rows.push(item)
 }
