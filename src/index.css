@@ -1,5 +1,20 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.flex {
+  display: flex;
+}
+
+.flex-grow {
+  flex: 1;
+}
+
+div.App {
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+div.App table {
+  width: 100%;
+}
+
+div.App table td {
+  text-align: center;
 }
